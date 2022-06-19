@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    /* margin-top: 100px; */
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.left {
+    width: 70%;
+}
+
+.right {
+    width: 30%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.text-orange {
+    color: #FF8A00
+}
+
+.summary {
+    display: flex;
+    height: 100%;
+    padding: 0 30px;
+    justify-content: space-between;
+    flex-direction: column;
+}

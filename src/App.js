@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Card } from './components';
+import Navigation from './Navigation';
+import styled from 'styled-components';
+import Checkout from './pages/Checkout';
 
 function App() {
+
+  const [currentStep, setCurrentStep] = useState(1);
+
+  const labels = [
+    'Delivery',
+    'Payment',
+    'Finish'
+  ];
+
+  const App = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  `;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <App>
+      <Card>
+        <Navigation labels={labels} currentStep={currentStep}></Navigation>
+        <Checkout currentStep={currentStep}/>
+      </Card>
+    </App>
   );
 }
 

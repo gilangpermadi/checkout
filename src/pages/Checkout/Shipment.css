@@ -1,0 +1,21 @@
+.container {
+    padding: 0 30px;
+}
+
+.h1 {
+    color: #FF8A00
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
